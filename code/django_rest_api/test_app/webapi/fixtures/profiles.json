@@ -1,0 +1,32 @@
+[
+    {
+        "model": "webapi.profile",
+        "pk": 1,
+        "fields": {
+            "name": "A子",
+            "email": "a-ko@gmail.com",
+            "message": "A子でーす",
+            "created_at": "2019-01-01 00:00:00"
+        }
+    },
+    {
+        "model": "webapi.profile",
+        "pk": 2,
+        "fields": {
+            "name": "B子",
+            "email": "b-ko@gmail.com",
+            "message": "B子でーす",
+            "created_at": "2019-02-01 00:00:00"
+        }
+    },
+    {
+        "model": "webapi.profile",
+        "pk": 3,
+        "fields": {
+            "name": "C子",
+            "email": "c-ko@gmail.com",
+            "message": "C子でーす",
+            "created_at": "2019-03-01 00:00:00"
+        }
+    }
+]

@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  db:
+    container_name: django_db
+    image: postgres:11.2
+    volumes:
+      - django_data_volume:/var/lib/postgresql/data
+  rest_api:
+    container_name: django_rest_api
+    build:
+      context: .
+      dockerfile: DockerfilePython
+    volumes:
+      - ./code/django_rest_api:/code
+    tty: true
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  web_front:
+    container_name: django_web_front
+    build:
+      context: .
+      dockerfile: DockerfileNode
+    volumes:
+      - ./code/django_web_front:/code
+    tty: true
+    ports:
+      - 3000:3000
+    depends_on:
+      - rest_api
+volumes:
+  django_data_volume:
