@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 
 const constants = {
-  "url": "http://192.168.33.15:8000/api/profile/?format=json"
+  "url": "http://localhost:8000/api/profile/?format=json"
 }
 
 class Form extends React.Component {
