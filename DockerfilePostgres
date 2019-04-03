@@ -1,0 +1,2 @@
+FROM postgres:11.2
+ADD ./code/django_db/init-user-db.sh /docker-entrypoint-initdb.d
