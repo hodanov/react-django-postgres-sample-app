@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 
+const constants = {
+  "url": "http://192.168.33.15:8000/api/profile/?format=json"
+}
+
 class Form extends React.Component {
   render() {
     return (
@@ -124,7 +128,7 @@ class App extends Component {
       'email': email,
       'message': message
     };
-    axios.post("http://localhost:8000/api/profile/?format=json", conf)
+    axios.post(constants["url"], conf)
     .then(response => {
       this.state.users.unshift(response.data);
       this.setState({
@@ -138,7 +142,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8000/api/profile/?format=json')
+    axios.get(constants["url"])
     .then(response => {
       this.setState({
         users: response.data.reverse(),
