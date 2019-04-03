@@ -3,7 +3,9 @@ version: "3"
 services:
   db:
     container_name: django_db
-    image: postgres:11.2
+    build:
+      context: .
+      dockerfile: DockerfilePostgres
     volumes:
       - django_data_volume:/var/lib/postgresql/data
   rest_api:
@@ -11,6 +13,7 @@ services:
     build:
       context: .
       dockerfile: DockerfilePython
+    command: ./run-migrate-and-server.sh
     volumes:
       - ./code/django_rest_api:/code
     tty: true
