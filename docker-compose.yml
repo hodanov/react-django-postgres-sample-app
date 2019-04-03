@@ -26,6 +26,7 @@ services:
     build:
       context: .
       dockerfile: DockerfileNode
+    command: ./npm-install-and-start.sh
     volumes:
       - ./code/django_web_front:/code
     tty: true
