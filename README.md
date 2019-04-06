@@ -25,11 +25,9 @@ Then, the three Docker containers will run.
 - django_rest_api
 - django_web_front
 
+After launching their containers, access the `localhost:3000`. The SPA will be shown the below.
 
-
-After launching their container, access the `localhost:3000`. The SPA will be shown the below.
-
-![sample_image](sample_image.png)
+![sample_image](img/sample_image.png)
 
 ### django_db
 
@@ -42,6 +40,12 @@ The django_rest_api is the Python/Django Web API. This returns JSON data when ac
 ### django_web_front
 
 The django_web_front is the Node.js/React container. This fetches API data from django_rest_api using React.
+
+## File Sharing settings
+
+It is necessary to modify the file sharing settings, since the directory of the host will be mounted as VOLUME, depending on the directory location.
+
+![sample_image](img/docker_settings.png)
 
 ## Details about files
 
