@@ -2,6 +2,19 @@
 
 This is the sample app using React, Django and Postgres on docker.
 
+This sample app is using the following technologies:
+
+- React
+- Node.js
+- Axios
+- Bulma
+- Python
+- Django
+- Django REST framework
+- Postgres
+- Docker
+- Docker Compose
+
 ## Requirements
 
 The app requires the following to run:
@@ -11,7 +24,7 @@ The app requires the following to run:
 
 ## Getting Started
 
-To see the app, clone the repo and `docker-compose up`.
+To see the app, clone the repo and execute `docker-compose up`.
 
 ```
 git clone git@github.com:hodanov/react-django-postgres-sample-app.git
