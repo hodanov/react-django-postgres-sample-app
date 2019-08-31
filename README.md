@@ -112,4 +112,4 @@ The app is specified some entry points in the `docker-compose.yml`. The command 
 
 ## Author
 
-[Hodaka Sakamoto](https://hodalog.com)
+[Hoda](https://hodalog.com)
